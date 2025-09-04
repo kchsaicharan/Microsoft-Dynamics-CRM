@@ -19,11 +19,11 @@ ________________________________________
     o	PCF Controls (for visualization, input enhancements)
 ________________________________________
 ## 🚦 Rules of Thumb
-•	✅ Always start with OOB features – less maintenance.
-•	✅ Power Automate > Workflows – modern, cloud-friendly, integrates well.
-•	✅ Client-side JS for UI only – don’t enforce business rules here.
-•	✅ Plugins for business-critical logic – secure & reliable.
-•	✅ PCF only if absolutely needed – custom UI adds complexity.
+### •	✅ Always start with OOB features – less maintenance.
+### •	✅ Power Automate > Workflows – modern, cloud-friendly, integrates well.
+### •	✅ Client-side JS for UI only – don’t enforce business rules here.
+### •	✅ Plugins for business-critical logic – secure & reliable.
+### •	✅ PCF only if absolutely needed – custom UI adds complexity.
 ________________________________________
 ## 🛠️ Example Scenarios
 1.	Auto-calculate Age from DOB → Formula field.
