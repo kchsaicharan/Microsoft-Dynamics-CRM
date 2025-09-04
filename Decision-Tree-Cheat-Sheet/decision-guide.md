@@ -1,4 +1,4 @@
-Decision Guide for Dynamics 365 / Power Platform Customizations
+#Decision Guide for Dynamics 365 / Power Platform Customizations
 🎯 Purpose
 This guide helps decide the best approach (OOB, automation, customization, or code) when implementing business requirements. Always follow the OOB → Low-code → Code priority order.
 ________________________________________
