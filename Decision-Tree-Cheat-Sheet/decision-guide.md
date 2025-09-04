@@ -33,3 +33,25 @@ ________________________________________
 5.	Validate Tax Number format before save → JavaScript.
 6.	Block record creation if duplicate exists → Plugin.
 7.	Show progress bar for completion → PCF Control.
+
+________________________________________
+________________________________________
+________________________________________
+# Limitation of Client-side Customizations
+## Why Client-side Customizations Don’t Work on Imports
+
+### Client-side customizations (JavaScript, Business Rules) only run when a record is interacted with in the form (UI).
+
+    Example: You open a form, type in a value, and your JavaScript validation triggers on onChange or onSave.
+
+### Imports, integrations, or API-based record creation bypass the UI.
+
+    Example: Data Import Wizard, Excel Import, Power Automate creating records, or an external API integration → these don’t trigger client-side events.
+
+So:
+
+## ✅ Client-side works only when user interacts with form in UI.
+
+## ❌ Client-side doesn’t work on imports / integrations / background processes.
+
+
