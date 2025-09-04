@@ -18,19 +18,6 @@ ________________________________________
 5.	Custom UI/UX
     o	PCF Controls (for visualization, input enhancements)
 ________________________________________
-📌 Feature Decision Table
-Requirement_Type          	            Best_Option	                Avoid / Notes
-Simple field calculations	              Formula column (preferred)	Avoid workflows for this
-Aggregating child records	              Rollup fields (if simple)	  Use plugin if performance issues
-Guiding users through a process	        Business Process Flow	      Don’t overcomplicate with Power Automate
-Show/hide fields, simple validations	  Business Rules	            Use JS only if rules too complex
-Complex form logic (real-time)	        Client-side JavaScript	    Ensure performance on forms
-Cross-system automation / approvals	    Power Automate Flows	      Classic workflows are deprecated
-Enforcing business rules securely	      Server-side Plugin	        Avoid client-side for critical rules
-Custom UI elements (maps, sliders)	    PCF Controls	              Use only if OOB controls can’t handle
-Sending emails / notifications	        Power Automate	            Avoid workflows
-High-performance, synchronous logic	    Plugin	                    Ensure optimized code
-________________________________________
 🚦 Rules of Thumb
 •	✅ Always start with OOB features – less maintenance.
 •	✅ Power Automate > Workflows – modern, cloud-friendly, integrates well.
