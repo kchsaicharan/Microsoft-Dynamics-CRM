@@ -1,0 +1,75 @@
+Final Approach Plan: CRM CI/CD with Git-Based Versioning
+✅ Phase 1: Build Pipeline (CI) — Export & Version
+Goal: Automatically export CRM solution and store it in a Git repo with rollback-ready naming.
+
+Actions:
+
+Create a pipeline with parameters:
+
+solutionName, solutionVersion, environment
+
+Export unmanaged solution from source CRM using SourceConnection
+
+Generate a unique .zip file name using timestamp
+
+Clone your Azure DevOps Git repo
+
+Create folder solutions/<solutionName> dynamically
+
+Commit and push the .zip file into that folder
+
+Outcome: Every export is versioned and stored in Git for rollback.
+
+✅ Phase 2: Release Pipeline (CD) — Import with Approval
+Goal: Deploy selected .zip version into target CRM with approval gates.
+
+Actions:
+
+Create a release pipeline (YAML or UI-based)
+
+Add a parameter or dropdown to select .zip version
+
+Use TargetConnection to import the solution
+
+Add pre-deployment approval (e.g., your name or team lead)
+
+Optionally add post-deployment validation
+
+Outcome: Controlled, auditable deployment into target CRM.
+
+✅ Phase 3: Rollback Strategy
+Goal: Redeploy any previous version from Git with zero YAML edits.
+
+Actions:
+
+Browse Git repo for older .zip files
+
+Trigger release pipeline manually
+
+Select the desired version
+
+Import into target CRM
+
+Outcome: Instant rollback with full traceability.
+
+✅ Phase 4: Security & Scalability
+Goal: Make your pipeline secure and enterprise-ready.
+
+Actions:
+
+Store secrets in Azure Key Vault
+
+Use variable groups for shared values
+
+Protect Git branches with policies
+
+Add tagging (v1.0, v1.1) for releases
+
+Outcome: Secure, scalable, and compliant pipeline architecture.
+
+🧠 Why This Plan Works for You
+Strength	Why It Fits You
+Beginner-friendly	You learn Git, YAML, and DevOps step by step
+Real-world logic	Matches how CRM teams deploy across environments
+Scalable	Can expand to UAT, Prod, rollback, and approvals
+Honest	No shortcuts — you build it the right way
